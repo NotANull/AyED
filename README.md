@@ -6,4 +6,5 @@
 ---
 
 ## <i><a href="https://github.com/NotANull/AyED/blob/main/src/tp1/P1.pdf">Práctica 1</a></i> 📚
-- **[Ejercicio1](https://github.com/NotANull/AyED/blob/main/src/tp1/Ejercicio1.java)**
+- **[Ejercicio 1](https://github.com/NotANull/AyED/blob/main/src/tp1/Ejercicio1.java)**
+- **[Ejercicio 2](https://github.com/NotANull/AyED/blob/main/src/tp1/Ejercicio2.java)**
