@@ -12,7 +12,7 @@
             impresos por consola?
 */
 
-package tp1.ejerecicio4;
+package tp1.ejercicio4;
 
 public class Ejercicio4 {
 
