@@ -28,8 +28,6 @@ public class Ejercicio5 {
             total+= n;
         }
 
-        arregloEnteros[0] = 10;
-
         return "Número máximo: " + max +
                "\nNúmero mínimo: " + min +
                "\nPromedio: " + (total / arregloEnteros.length);
@@ -38,21 +36,25 @@ public class Ejercicio5 {
 
     public static void procesarArreglo2(int[] arregloEnteros, Objeto o) {
 
+        int max = -1;
+        int min = 9999;
         int total = 0;
 
         for (int n : arregloEnteros) {
-            if (n > o.getMax()) {
-                o.setMax(n);
+            if (n > max) {
+                max = n;
             }
 
-            if (n < o.getMin()) {
-                o.setMin(n);
+            if (n < min) {
+                min = n;
             }
 
             total+= n;
 
         }
 
+        o.setMax(max);
+        o.setMin(min);
         o.setPromedio(total / arregloEnteros.length);
     }
 
