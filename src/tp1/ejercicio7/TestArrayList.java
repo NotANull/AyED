@@ -31,11 +31,41 @@ import java.util.Scanner;
 
 public class TestArrayList {
 
+    public static boolean isCapicua(List n, int pri, int ult) {
+        if (pri >= ult) {
+            return true;
+        }
+        if (!n.get(pri).equals(n.get(ult))) {
+            return false;
+        }
+
+        return isCapicua(n, (pri+1), (ult-1));
+    }
+
+    public static List<Integer> calcularSucesion(int n) {
+        List<Integer> listaEnteros = new ArrayList<>();
+        procesarNumeros(listaEnteros, n);
+        return listaEnteros;
+    }
+
+    private static void procesarNumeros(List<Integer> listaEnteros, int n) {
+        listaEnteros.add(n);
+        if(n == 1) {
+            return;
+        }
+        if ((n % 2) == 0) {
+            procesarNumeros(listaEnteros, n/2);
+        } else {
+            procesarNumeros(listaEnteros, (3*n)+1);
+        }
+    }
+
     public static void main(String[] args) {
 
         //--------Inciso a--------\\
 
-        /*Scanner teclado = new Scanner(System.in);
+        /*
+        Scanner teclado = new Scanner(System.in);
         List<Integer> listaEnteros = new ArrayList<>();
 
         for (int i = 0; i < 5; i++) {
@@ -47,8 +77,19 @@ public class TestArrayList {
             System.out.print(dato + "-");
         }
 
-         */
+        if(isCapicua(listaEnteros, 0, listaEnteros.size()-1)) {
+            System.out.println("Es capicúa");
+        }
 
+*/
+
+        List<Integer> lista = calcularSucesion(6);
+        System.out.println("Sucesión de números");
+        for (Integer dato : lista) {
+            System.out.print(dato + " - ");
+        }
+
+/*
         //--------Inciso b--------\\
 
         List<Estudiante> listaEstudiantes = List.of(
@@ -85,6 +126,8 @@ public class TestArrayList {
         for (Estudiante dato : listaEstudiantesCopia) {
             System.out.println(dato);
         }
+
+ */
     }
 
 }
