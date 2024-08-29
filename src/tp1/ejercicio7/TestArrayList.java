@@ -60,11 +60,22 @@ public class TestArrayList {
         }
     }
 
-    public static void main(String[] args) {
+    public static void invertirArrayList(List lista, int pri, int ult) {
+        if (pri > ult) {
+            return;
+        }
 
+        int aux = (int) lista.get(pri);
+        lista.set(pri, lista.get(ult));
+        lista.set(ult, aux);
+
+        invertirArrayList(lista, (pri+1), (ult-1));
+    }
+
+    public static void main(String[] args) {
+        /*
         //--------Inciso a--------\\
 
-        /*
         Scanner teclado = new Scanner(System.in);
         List<Integer> listaEnteros = new ArrayList<>();
 
@@ -77,19 +88,6 @@ public class TestArrayList {
             System.out.print(dato + "-");
         }
 
-        if(isCapicua(listaEnteros, 0, listaEnteros.size()-1)) {
-            System.out.println("Es capicúa");
-        }
-
-*/
-
-        List<Integer> lista = calcularSucesion(6);
-        System.out.println("Sucesión de números");
-        for (Integer dato : lista) {
-            System.out.print(dato + " - ");
-        }
-
-/*
         //--------Inciso b--------\\
 
         List<Estudiante> listaEstudiantes = List.of(
@@ -127,7 +125,36 @@ public class TestArrayList {
             System.out.println(dato);
         }
 
- */
+        //--------Inciso f--------\\
+        if(isCapicua(listaEnteros, 0, listaEnteros.size()-1)) {
+            System.out.println("Es capicúa");
+        }
+
+
+        //--------Inciso g--------\\
+        List<Integer> lista = calcularSucesion(6);
+        System.out.println("Sucesión de números");
+        for (Integer dato : lista) {
+            System.out.print(dato + " - ");
+        }
+
+         */
+
+        //--------Inciso h--------\\
+        ArrayList<Integer> listaOriginal = new ArrayList<>();
+        listaOriginal.add(1);
+        listaOriginal.add(3);
+        listaOriginal.add(0);
+        listaOriginal.add(1);
+        listaOriginal.add(1);
+        listaOriginal.add(9);
+        listaOriginal.add(9);
+        listaOriginal.add(5);
+        invertirArrayList(listaOriginal, 0, listaOriginal.size()-1);
+        System.out.println("Lista Invertida");
+        for (Integer n : listaOriginal) {
+            System.out.print(n + " - ");
+        }
     }
 
 }
