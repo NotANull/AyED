@@ -11,4 +11,5 @@
 - **[Ejercicio 3](https://github.com/NotANull/AyED/blob/main/src/tp1/ejercicio3)**
 - **[Ejercicio 4](https://github.com/NotANull/AyED/blob/main/src/tp1/ejercicio4)**
 - **[Ejercicio 5](https://github.com/NotANull/AyED/blob/main/src/tp1/Ejercicio5.java)**
-- **[Ejercicio 7](https://github.com/NotANull/AyED/blob/main/src/tp1/ejercicio7)**
+- **[Ejercicio 7](https://github.com/NotANull/AyED/blob/main/src/tp1/Ejercicio7.java)**
+- **[Ejercicio 8](https://github.com/NotANull/AyED/blob/main/src/tp1/ejercicio8)**

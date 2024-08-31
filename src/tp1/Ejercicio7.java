@@ -19,17 +19,49 @@
             v. vuelva a imprimir el contenido de la lista original y el contenido de la nueva lista.
                 ¿Qué conclusiones obtiene a partir de lo realizado?
             vi. ¿Cuántas formas de copiar una lista existen?¿Qué diferencias existen entre ellas?
+
+        e.  A la lista del punto7d, agregue un nuevo estudiante. Antes de agregar, verifique que el
+            estudiante no estaba incluído en la lista.
+
+        f.  Escriba un métod que devuelva verdadero o falso si la secuencia almacenada en la lista es
+            o no capicúa.
+
+        g.  Considere que se aplica la siguiente función de forma recursiva. A partir de un número n
+            positivo se obtiene una sucesión que termina en 1.
+
+                f(n) = { n/2 si n es par, 3n+1 si n es impar.
+                Por ejemplo, para n = 6, se obtiene la siguiente sucesión:
+                f(6) = 6/2 = 3
+                f(3) = 3*3 + 1 = 10
+                f(10) = 10/2 = 5
+                ...
+                ...
+
+                Es decir, la sucesión 6, 3, 10, 5, 16, 8, 4, 2, 1 para cualquier n con el que se arranque siempre
+                se llegará a 1.
+
+        h.  Implemente un métod recursivo que invierta el orden de los elementos en un ArrayList.
+                public void invertirArray(ArrayList<Integer> lista)
+
+        i.  Implemente un métod recursivo que calcule la suma de los elementos en un LinkedList.
+                public int sumarLinkedList(LinkedList<Integer> lista)
+
+                Si quiero utilizar la clase LinkedList, al pasar por parámetro la lista se verá modificada porque
+                no hay métod que devuelva el elemento sin eliminarlo. A no ser que le pase por parámetro un índice
+                y obtener el elemento sin eliminarlo con el métod get()
+
+        j.  Implemente el métod combinarOrdenado que reciba 2 lista de números ordenados y devuelva una nueva lista
+            también ordenada conteniendo los elementos de las 2 listas.
+                public ArrayList<Integer> combinarOrdenado(ArrayList<Integer> lista1, ArrayList<Integer> lista2)
  */
 
-package tp1.ejercicio7;
-
-import tp1.ejercicio3.Estudiante;
+package tp1;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
-public class TestArrayList {
+public class Ejercicio7 {
 
     public static boolean isCapicua(List n, int pri, int ult) {
         if (pri >= ult) {
@@ -70,6 +102,13 @@ public class TestArrayList {
         lista.set(ult, aux);
 
         invertirArrayList(lista, (pri+1), (ult-1));
+    }
+
+    public static int sumarLinkedList(LinkedList<Integer> lista) {
+        if (lista.isEmpty()) {
+            return 0;
+        }
+        return lista.removeFirst() + sumarLinkedList(lista);
     }
 
     public static void main(String[] args) {
@@ -138,8 +177,6 @@ public class TestArrayList {
             System.out.print(dato + " - ");
         }
 
-         */
-
         //--------Inciso h--------\\
         ArrayList<Integer> listaOriginal = new ArrayList<>();
         listaOriginal.add(1);
@@ -155,6 +192,20 @@ public class TestArrayList {
         for (Integer n : listaOriginal) {
             System.out.print(n + " - ");
         }
+
+         */
+
+        //--------Inciso i--------\\
+        LinkedList<Integer> listaLinkedListNumeros = new LinkedList<>();
+        listaLinkedListNumeros.add(1);
+        listaLinkedListNumeros.add(3);
+        listaLinkedListNumeros.add(0);
+        listaLinkedListNumeros.add(1);
+        listaLinkedListNumeros.add(1);
+        listaLinkedListNumeros.add(9);
+        listaLinkedListNumeros.add(9);
+        listaLinkedListNumeros.add(5);
+        System.out.println("La suma de los números es: " + sumarLinkedList(listaLinkedListNumeros));
     }
 
 }
