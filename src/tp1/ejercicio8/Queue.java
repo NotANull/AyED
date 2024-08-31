@@ -1,13 +1,14 @@
 package tp1.ejercicio8;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Queue <T> extends Sequence{
 
-    private List<T> data;
+    protected List<T> data;
 
     public Queue() {
-
+        this.data = new ArrayList<>();
     }
 
     public void enqueue(T dato) {
