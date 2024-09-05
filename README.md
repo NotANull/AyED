@@ -14,5 +14,5 @@
 - **[Ejercicio 7](https://github.com/NotANull/AyED/blob/main/src/tp1/Ejercicio7.java)**
 - **[Ejercicio 8](https://github.com/NotANull/AyED/blob/main/src/tp1/ejercicio8)**
 
-## <i><a href="https://github.com/NotANull/AyED/blob/main/src/tp1/P1.pdf">Práctica 2</a></i> 📚
+## <i><a href="https://github.com/NotANull/AyED/blob/main/src/tp2/P2.pdf">Práctica 2</a></i> 📚
 - **[Ejercicio 2](https://github.com/NotANull/AyED/blob/main/src/tp2/BinaryTree.java)**
