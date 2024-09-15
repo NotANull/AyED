@@ -1,4 +1,6 @@
-package tp2;
+package tp2.ejercicio2;
+
+import tp2.BinaryTree;
 
 public class MainPruebas {
 
@@ -17,22 +19,8 @@ public class MainPruebas {
         ab.addLeftChild(hi);
         ab.addRightChild(hd);
 
-        //OTRO ÁRBOL...
-
-        BinaryTree<Integer> root = new BinaryTree<>(1);
-        BinaryTree<Integer> left = new BinaryTree<>(2);
-        BinaryTree<Integer> right = new BinaryTree<>(3);
-        BinaryTree<Integer> leftLeft = new BinaryTree<>(4);
-        BinaryTree<Integer> rightRight = new BinaryTree<>(5);
-
-        root.addLeftChild(left);
-        root.addRightChild(right);
-        left.addLeftChild(leftLeft);
-        right.addRightChild(rightRight);
-
         //----------EJERCICIO 2a----------\\
         System.out.println("Cantidad de hojas del árbol Binario ab: " + ab.contarHojas());
-        System.out.println("Cantidad de hojas del árbol Binario root: " + root.contarHojas());
 
     }
 
