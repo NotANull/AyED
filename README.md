@@ -19,3 +19,6 @@
 - **[Ejercicio 3](https://github.com/NotANull/AyED/blob/main/src/tp2/ejercicio3/ContadorArbol.java)**
 - **[Ejercicio 4](https://github.com/NotANull/AyED/blob/main/src/tp2/ejercicio4/RedBinariaLlena.java)**
 - **[Ejercicio 5](https://github.com/NotANull/AyED/blob/main/src/tp2/ejercicio5/ProfundidadDeArbolBinario.java)**
+
+## <i><a href="https://github.com/NotANull/AyED/blob/main/src/tp3/P3.pdf">Práctica 3</a></i> 📚
+- **[Ejercicio 2](https://github.com/NotANull/AyED/blob/main/src/tp3/ejercicio2/RecorridosAG.java)**
