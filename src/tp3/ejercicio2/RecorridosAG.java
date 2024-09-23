@@ -60,4 +60,27 @@ public class RecorridosAG {
         }
     }
 
+    public List<Integer> numerosImparesMayoresQuePostOrden(GeneralTree<Integer> a, Integer n) {
+        List<Integer> lista = new ArrayList<>();
+        if ((a != null) && (!a.isEmpty())) {
+            recorrerArbolPostOrden(a, n, lista);
+        }
+        return lista;
+    }
+
+    private void recorrerArbolPostOrden(GeneralTree<Integer> a, Integer n, List<Integer> lista) {
+        if (a.hasChildren()) {
+            List<GeneralTree<Integer>> hijos = a.getChildren();
+            Iterator<GeneralTree<Integer>> it = hijos.iterator();
+            while (it.hasNext()){
+                GeneralTree<Integer> hijo = it.next();
+                recorrerArbolPostOrden(hijo, n, lista);
+            }
+        }
+        if ( ((a.getData() % 2) != 0) && (a.getData() > n) ) {
+            lista.add(a.getData());
+        }
+    }
+
+
 }

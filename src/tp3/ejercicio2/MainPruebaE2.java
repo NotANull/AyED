@@ -23,7 +23,7 @@ public class MainPruebaE2 {
         gt.addChild(hijo1);
         gt.addChild(hijo2);
 
-        List<Integer> lista = new RecorridosAG().numerosImparesMayoresQueInOrden(gt, 4);
+        List<Integer> lista = new RecorridosAG().numerosImparesMayoresQuePostOrden(gt, 4);
         for(Integer n : lista) {
             System.out.print(n + " - ");
         }
