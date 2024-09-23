@@ -9,16 +9,16 @@ import java.util.List;
 
 public class RecorridosAG {
 
-    public List<Integer> numerosImparesMayoresQuePreOrden(GeneralTree<Integer> a, Integer n){
+    public List<Integer> numerosImparesMayoresQuePreOrden(GeneralTree<Integer> a, Integer n) {
         List<Integer> lista = new ArrayList<>();
-        if ( (a != null) && (!a.isEmpty()) ) {
+        if ((a != null) && (!a.isEmpty())) {
             recorrerArbolPreOrden(a, n, lista);
         }
         return lista;
     }
 
     private void recorrerArbolPreOrden(GeneralTree<Integer> a, Integer n, List<Integer> lista) {
-        if ( (a.getData() % 2 != 0 ) && (a.getData() > n) ) {
+        if ((a.getData() % 2 != 0) && (a.getData() > n)) {
             lista.add(a.getData());
         }
         if (a.hasChildren()) {
@@ -27,6 +27,35 @@ public class RecorridosAG {
             while (it.hasNext()) {
                 GeneralTree<Integer> hijoActual = it.next();
                 recorrerArbolPreOrden(hijoActual, n, lista);
+            }
+        }
+    }
+
+    public List<Integer> numerosImparesMayoresQueInOrden(GeneralTree<Integer> a, Integer n) {
+        List<Integer> lista = new ArrayList<>();
+        if ((a != null) && (!a.isEmpty())) {
+            recorrerArbolInOrden(a, n, lista);
+        }
+        return lista;
+    }
+
+    private void recorrerArbolInOrden(GeneralTree<Integer> a, Integer n, List<Integer> lista) {
+        Iterator<GeneralTree<Integer>> it = null;
+        if (a.hasChildren()){
+            List<GeneralTree<Integer>> listaHijos = a.getChildren();
+            it = listaHijos.iterator();
+            if (it.hasNext()) {
+                GeneralTree<Integer> primerHijo = it.next();
+                recorrerArbolInOrden(primerHijo, n, lista);
+            }
+        }
+        if ((a.getData() % 2 != 0) && (a.getData() > n)) {
+            lista.add(a.getData());
+        }
+        if (it != null) {
+            while (it.hasNext()) {
+                GeneralTree<Integer> siguienteHijo = it.next();
+                recorrerArbolInOrden(siguienteHijo, n, lista);
             }
         }
     }
